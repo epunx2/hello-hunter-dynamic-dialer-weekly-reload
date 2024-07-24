@@ -39,6 +39,7 @@ end
 def update_customer(z_cust,cust_name,balance,reload_amnt)
   update_cust = {'Account' => z_cust['id']}
   update_cust['HH_Name'] = cust_name
+  update_cust['Load_Type'] = 'Dynamic Weekly Load'
   update_cust['New_Balance'] = balance + reload_amnt
   update_cust['Old_Balance'] = balance
   update_cust['Platform_Id'] = z_cust['Hello_Hunter_Id']
