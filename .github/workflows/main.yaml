@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Build binary
         run: |
-          sudo apt update && sudoe apt install -y zip && sudo zip -r code.zip *
+          sudo apt update && sudo apt install -y zip && sudo zip -r code.zip *
       - name: default deploy
         uses: appleboy/lambda-action@v0.2.0
         with:
