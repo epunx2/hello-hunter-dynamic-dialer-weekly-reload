@@ -56,7 +56,6 @@ class ZohoCrmApi
 
   def api_call(url, type, payload = nil)
     json_payload = payload.nil? ? payload : JSON.generate(payload)
-    $logger.info("#{url} #{json_payload}")
     response =
       case type
       when 'get' then @conn.get(url,json_payload)
@@ -64,7 +63,6 @@ class ZohoCrmApi
       when 'put' then @conn.put(url,json_payload)
       end
 
-    $logger.info
     case response.status
     when 200, 201, 202
       data = JSON.parse(response.body)
