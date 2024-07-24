@@ -1,8 +1,6 @@
 name: Deploy Lambda Function
 
-on:
-  push:
-  branches: [main]
+on: [push]
 
 jobs:
   deploy_source:
