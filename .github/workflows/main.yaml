@@ -18,7 +18,7 @@ jobs:
         uses: imehedi/actions-aws-cli@v2
         with:
           args: lambda update-function-code
-          --function-name ${{ secrets.FUNCTION_NAME }}
+          --function-name hello-hunter-dynamic-dialer-weekly-reload
           --zip-file fileb://code.zip
 
         env:
