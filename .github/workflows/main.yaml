@@ -7,19 +7,12 @@ jobs:
   deploy_zip:
     name: deploy lambda function
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        go-version: [1.21]
     steps:
       - name: checkout source code
         uses: actions/checkout@v3
-      - name: Install Go
-        uses: actions/setup-go@v1
-        with:
-          go-version: ${{ matrix.go-version }}
       - name: Build binary
         run: |
-          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -a -o && zip -r deployment.zip *
+          apt-get update && apt-get install -y zip && zip -r code.zip *
       - name: default deploy
         uses: appleboy/lambda-action@v0.2.0
         with:
@@ -27,4 +20,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-east-1'
           function_name: hello-hunter-dynamic-dialer-weekly-reload
-          zip_file: deployment.zip
+          zip_file: code.zip
