@@ -1,3 +1,7 @@
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/epunx2/hello-hunter-dynamic-dialer-weekly-reload/main.yaml)
+
+<br>
+
 # hh-dd-weekly-reload
 
 AWS Lambda Ruby Function
@@ -12,7 +16,7 @@ AWS Lambda Ruby Function
 
 **AWS Lambda Function Name:**   ***[hello-hunter-dynamic-dialer-weekly-reload](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/hello-hunter-dynamic-dialer-weekly-reload?newFunction=true&tab=code)***
 
-**AWS Lambda Function Runtime:** ***[Ruby 3.2.2](https://docs.ruby-lang.org/en/3.2/)***
+**AWS Lambda Function Runtime:** ***[Ruby 3.3.0](https://docs.ruby-lang.org/en/3.3/)***
 
 **Amazon EventBridge Rule Name:** ***[hh-weekly-load](https://us-east-1.console.aws.amazon.com/scheduler/home?region=us-east-1#schedules/default/hh-weekly-load)***
 
