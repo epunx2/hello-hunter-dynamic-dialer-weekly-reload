@@ -1,6 +1,6 @@
 ![GitHub Actions Workflow Status](https://github.com/epunx2/hello-hunter-dynamic-dialer-weekly-reload/actions/workflows/main.yaml/badge.svg)
 
-# hh-dd-weekly-reload
+# Hello Hunter Dynamic Dialer Weekly Reload
 
 AWS Lambda Ruby Function
 
@@ -53,32 +53,32 @@ AWS Lambda Ruby Function
     ```bash
     $ bundle install
     ```
-    ## Making Changes ##
-    * Make changes
-    * Test changes
-        ```bash
-        $ ruby lambda_function.rb
-        ```
-    * Bundle gems for deployment
-        ```bash
-        bundle config set --local path 'vendor/bundle' && bundle install
-        ```
-    * Push changes to repo
-      * Add to staging
-      ```bash
-      $ git add --all
-      ```
-      * Commit Changes
-      ```bash
-      $ git commit -m 'your message'
-      ```
-      * Push to GitHub *(you may be prompted to enter your GitHub app password)*
-      ```bash
-      $ git push origin main
-      ```
-    GitHub will automatically deploy the changes to AWS Lambda.
+## Making Changes ##
+* Make changes
+* Test changes
+    ```bash
+    $ ruby lambda_function.rb
+    ```
+* Bundle gems for deployment
+    ```bash
+    bundle config set --local path 'vendor/bundle' && bundle install
+    ```
+* Push changes to repo
+  * Add to staging
+  ```bash
+  $ git add --all
+  ```
+  * Commit Changes
+  ```bash
+  $ git commit -m 'your message'
+  ```
+  * Push to GitHub *(you may be prompted to enter your GitHub app password)*
+  ```bash
+  $ git push origin main
+  ```
+GitHub will automatically deploy the changes to AWS Lambda.
 
-    ## Who do I talk to? ##
+## Who do I talk to? ##
 
-    * [Eric Chrobak](mailto:echrobak@vaspian.com) or [Chris Aloi](mailto:caloi@vaspian.com)
-    * [Vaspian Engineering](mailto:engineering@vaspian.com)
+* [Eric Chrobak](mailto:echrobak@vaspian.com) or [Chris Aloi](mailto:caloi@vaspian.com)
+* [Vaspian Engineering](mailto:engineering@vaspian.com)
