@@ -8,7 +8,7 @@ $crm_api = ZohoCrmApi.new
 $reload_date = Date.today.strftime("%F")
 $hh_api = HelloHunterApi.new
 
-def lambda_handler(event:, context:)
+def main()
   accounts_query = '(((Dialer_Package:equals:Dynamic Dialer)and(Hello_Hunter_Id:not_equal:null))and(Weekly_Reload_Amount:not_equal:null))'
   z_custs = $crm_api.search('Accounts',accounts_query)
   if z_custs.is_a?(Array) && z_custs.count > 0
@@ -26,7 +26,7 @@ def process_customers(z_custs,hh_custs)
       cust_min = reload_cust['available_minutes'].to_f
       balance = (cust_min * cust_call_rate / 60).round(0)
       cust_name = reload_cust['user_group_name']
-      reload_amnt = z_cust['Reload_Amount']
+      reload_amnt = z_cust['Weekly_Reload_Amount']
       $logger.info("Customer: #{cust_name} Balance: $#{balance} Reload Amount: $#{reload_amnt}")
       hh_reload_resp = $hh_api.give_credit(z_hh_id,reload_amnt)
       if hh_reload_resp == 200
@@ -53,3 +53,5 @@ def update_customer(z_cust,cust_name,balance,reload_amnt)
     $logger.info(reload_resp[0][0]['message'])
   end
 end
+
+main()
