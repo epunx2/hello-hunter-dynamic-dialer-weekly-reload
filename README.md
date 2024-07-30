@@ -1,6 +1,4 @@
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/epunx2/hello-hunter-dynamic-dialer-weekly-reload/main.yaml)
-
-<br>
+![GitHub Actions Workflow Status](https://github.com/github/docs/epunx2/hello-hunter-dynamic-dialer-weekly-reload/actions/workflows/main.yaml.badge.svg)
 
 # hh-dd-weekly-reload
 
