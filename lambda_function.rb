@@ -8,7 +8,7 @@ $crm_api = ZohoCrmApi.new
 $reload_date = Date.today.strftime("%F")
 $hh_api = HelloHunterApi.new
 
-def main()
+def lambda_handler(event:, context:)
   accounts_query = '(((Dialer_Package:equals:Dynamic Dialer)and(Hello_Hunter_Id:not_equal:null))and(Weekly_Reload_Amount:not_equal:null))'
   z_custs = $crm_api.search('Accounts',accounts_query)
   if z_custs.is_a?(Array) && z_custs.count > 0
@@ -54,4 +54,4 @@ def update_customer(z_cust,cust_name,balance,reload_amnt)
   end
 end
 
-main()
+lambda_handler()
