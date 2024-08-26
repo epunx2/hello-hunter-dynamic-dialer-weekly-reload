@@ -53,5 +53,3 @@ def update_customer(z_cust,cust_name,balance,reload_amnt)
     $logger.info(reload_resp[0][0]['message'])
   end
 end
-
-lambda_handler()
